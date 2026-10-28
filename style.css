@@ -4,7 +4,6 @@
   --muted: #6b675f;
   --line: #e4e0d8;
   --accent: #c2410c;
-  --card: #ffffff;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -13,7 +12,6 @@
     --muted: #a09b91;
     --line: #2e2c29;
     --accent: #fb923c;
-    --card: #1c1b19;
   }
 }
 
@@ -51,11 +49,6 @@ a { color: var(--accent); }
 .hero { display: flex; gap: 24px; align-items: center; margin-bottom: 1.5em; }
 .hero img { width: 96px; height: 96px; border-radius: 22px; flex: none; }
 @media (max-width: 480px) { .hero { flex-direction: column; align-items: flex-start; } }
-
-.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 12px; margin: 1.5em 0; }
-.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
-.card strong { display: block; margin-bottom: 4px; }
-.card span { color: var(--muted); font-size: 15px; }
 
 footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
 footer .wrap { padding-top: 18px; padding-bottom: 28px; }
