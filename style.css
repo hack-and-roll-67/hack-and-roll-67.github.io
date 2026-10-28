@@ -1,0 +1,61 @@
+:root {
+  --bg: #fbfaf7;
+  --fg: #1d1c1a;
+  --muted: #6b675f;
+  --line: #e4e0d8;
+  --accent: #c2410c;
+  --card: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141312;
+    --fg: #ece9e3;
+    --muted: #a09b91;
+    --line: #2e2c29;
+    --accent: #fb923c;
+    --card: #1c1b19;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.wrap { max-width: 44rem; margin: 0 auto; padding: 0 16px; }
+
+header { border-bottom: 1px solid var(--line); }
+header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 14px; padding-bottom: 14px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 650; color: var(--fg); text-decoration: none; }
+.brand img { width: 32px; height: 32px; border-radius: 8px; }
+nav { display: flex; gap: 18px; font-size: 15px; }
+nav a { color: var(--muted); text-decoration: none; }
+nav a:hover, nav a[aria-current="page"] { color: var(--fg); }
+
+main { padding: 40px 0 56px; }
+h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 6px; letter-spacing: -0.01em; }
+h2 { font-size: 1.2rem; margin: 2.2em 0 0.4em; }
+p, ul { margin: 0 0 1em; }
+ul { padding-left: 1.3em; }
+li { margin: 0.25em 0; }
+a { color: var(--accent); }
+.meta { color: var(--muted); font-size: 15px; margin-bottom: 2em; }
+.lead { font-size: 1.1rem; }
+
+.hero { display: flex; gap: 24px; align-items: center; margin-bottom: 1.5em; }
+.hero img { width: 96px; height: 96px; border-radius: 22px; flex: none; }
+@media (max-width: 480px) { .hero { flex-direction: column; align-items: flex-start; } }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 12px; margin: 1.5em 0; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+.card strong { display: block; margin-bottom: 4px; }
+.card span { color: var(--muted); font-size: 15px; }
+
+footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+footer .wrap { padding-top: 18px; padding-bottom: 28px; }
