@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Reel Studio</title>
+  <link rel="icon" href="/icon.png">
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    // TikTok Login Kit redirect URI. TikTok only accepts a fixed https URL, so it sends the user here
+    // and this page hands ?code=…&state=… on to the Reel Studio dashboard running on this computer.
+    location.replace("http://127.0.0.1:4400/oauth/tiktok" + location.search);
+  </script>
+</head>
+<body>
+  <main>
+    <div class="wrap">
+      <h1>Returning to Reel Studio…</h1>
+      <p>If nothing happens, make sure Reel Studio is running and reload this page.</p>
+    </div>
+  </main>
+</body>
+</html>
